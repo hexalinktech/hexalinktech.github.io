@@ -1,322 +1,65 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="section" id="servicios">
+<h2>Nuestras Soluciones</h2>
 
-<title>HexaLink Tech | Soporte Técnico Empresarial en CDMX</title>
+<!-- SERVICIOS DE TI -->
+<h3 style="margin-bottom:30px;color:#facc15;">💻 Servicios de TI</h3>
+<div class="grid">
 
-<meta name="description" content="Soporte técnico empresarial en CDMX. Reparación, mantenimiento y administración de equipos de cómputo para empresas en Ciudad de México.">
-<meta name="keywords" content="soporte técnico CDMX, reparación laptops CDMX, soporte empresarial, mantenimiento computadoras CDMX">
-<meta name="author" content="HexaLink Tech">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-html{
-scroll-behavior:smooth;
-scroll-padding-top:90px;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#0f172a;
-color:white;
-line-height:1.6;
-}
-
-/* ===== HEADER ===== */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-height:80px;
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(10px);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 8%;
-z-index:1000;
-}
-
-/* ===== LOGO ===== */
-
-.logo-container{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo-container img{
-height:38px;              /* Tamaño corregido */
-max-width:160px;
-width:auto;
-object-fit:contain;
-background:#0f172a;       /* Si el logo tiene fondo blanco ayuda a integrarlo */
-padding:4px;
-border-radius:6px;
-}
-
-.logo-text{
-display:flex;
-flex-direction:column;
-line-height:1.1;
-}
-
-.brand-name{
-font-weight:700;
-font-size:18px;
-color:#facc15;
-}
-
-.brand-sub{
-font-size:11px;
-color:#cbd5e1;
-letter-spacing:1px;
-}
-
-/* ===== NAV ===== */
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#facc15;
-}
-
-/* ===== HERO ===== */
-
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover no-repeat;
-display:flex;
-align-items:center;
-padding:0 8%;
-position:relative;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:650px;
-animation:fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-.hero h1{
-font-size:44px;
-margin-bottom:20px;
-}
-
-.hero span{
-color:#facc15;
-}
-
-.hero p{
-color:#cbd5e1;
-margin-bottom:30px;
-}
-
-/* ===== BOTONES ===== */
-
-.btn{
-background:#facc15;
-color:black;
-padding:14px 28px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#eab308;
-}
-
-/* ===== SECCIONES ===== */
-
-.section{
-padding:100px 8%;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:50px;
-font-size:32px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:#1e293b;
-padding:30px;
-border-radius:12px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-background:#334155;
-}
-
-.service-icon{
-font-size:40px;
-color:#facc15;
-margin-bottom:20px;
-display:block;
-}
-
-/* ===== WHY SECTION ===== */
-
-.why{
-background:#111827;
-}
-
-.why .card{
-text-align:center;
-}
-
-/* ===== FORMULARIO ===== */
-
-form{
-display:grid;
-gap:15px;
-max-width:600px;
-margin:auto;
-}
-
-input, textarea{
-padding:12px;
-border-radius:6px;
-border:none;
-}
-
-textarea{
-resize:none;
-height:120px;
-}
-
-.contact-info{
-text-align:center;
-margin-top:40px;
-line-height:2;
-}
-
-/* ===== FOOTER ===== */
-
-footer{
-background:#0b1220;
-text-align:center;
-padding:40px;
-color:#94a3b8;
-}
-
-/* ===== WHATSAPP ===== */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-font-size:20px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
-transition:0.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:768px){
-
-nav{
-display:none;
-}
-
-.hero h1{
-font-size:30px;
-}
-
-.section{
-padding:80px 6%;
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo-container">
-    <img src="images/logo.png" alt="HexaLink Logo">
-    <div class="logo-text">
-        <span class="brand-name">HexaLink</span>
-        <span class="brand-sub">Tecnología y Seguridad</span>
-    </div>
+<div class="card">
+<i class="fas fa-laptop-code service-icon"></i>
+<h3>Soporte Técnico Empresarial</h3>
+<p>Diagnóstico, reparación y mantenimiento de equipos de cómputo empresariales.</p>
 </div>
 
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#porque">¿Por qué elegirnos?</a>
-<a href="#empresas">Empresas</a>
-<a href="#contacto">Contacto</a>
-</nav>
-</header>
+<div class="card">
+<i class="fas fa-network-wired service-icon"></i>
+<h3>Infraestructura de Redes</h3>
+<p>Instalación y administración de redes cableadas e inalámbricas seguras.</p>
+</div>
 
-<section class="hero" id="inicio">
-<div class="hero-content">
-<h1>Soporte Técnico <span>Empresarial</span> en CDMX</h1>
-<p>Ayudamos a empresas a mantener sus equipos funcionando al máximo rendimiento.</p>
-<a href="#empresas" class="btn">Solicitar Propuesta</a>
+<div class="card">
+<i class="fas fa-database service-icon"></i>
+<h3>Respaldo y Recuperación</h3>
+<p>Sistemas de backup y recuperación de información crítica empresarial.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-shield-virus service-icon"></i>
+<h3>Seguridad Informática</h3>
+<p>Protección contra virus, malware y amenazas digitales.</p>
+</div>
+
+</div>
+
+<br><br>
+
+<!-- SEGURIDAD ELECTRÓNICA -->
+<h3 style="margin-bottom:30px;color:#facc15;">🛡 Seguridad Electrónica</h3>
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-video service-icon"></i>
+<h3>Instalación de Cámaras CCTV</h3>
+<p>Sistemas HD, Full HD y 4K con visión nocturna y monitoreo remoto.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-id-card service-icon"></i>
+<h3>Control de Acceso</h3>
+<p>Sistemas con huella digital, tarjeta, código y app móvil.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-tools service-icon"></i>
+<h3>Instalación y Configuración</h3>
+<p>Instalación profesional de equipos de seguridad y configuración garantizada.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cogs service-icon"></i>
+<h3>Mantenimiento Preventivo y Correctivo</h3>
+<p>Revisión, actualización y optimización de sistemas de seguridad.</p>
+</div>
+
 </div>
 </section>
-
-<!-- El resto de tu contenido queda igual -->
-
-<footer>
-© 2026 HexaLink Tech | Soluciones Tecnológicas en Ciudad de México
-</footer>
-
-<a class="whatsapp" href="https://wa.me/527751449539?text=Hola%20quiero%20información%20sobre%20soporte%20empresarial" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-</body>
-</html>
