@@ -153,13 +153,19 @@ margin-bottom:20px;
 display:block;
 }
 
-.highlight{
-background:#1e293b;
-padding:40px;
-border-radius:12px;
-max-width:900px;
-margin:auto;
+/* NUEVA SECCIÓN */
+.why{
+background:#111827;
+}
+
+.why .card{
 text-align:center;
+}
+
+.contact-info{
+text-align:center;
+margin-top:40px;
+line-height:2;
 }
 
 form{
@@ -178,12 +184,6 @@ border:none;
 textarea{
 resize:none;
 height:120px;
-}
-
-.contact-info{
-text-align:center;
-margin-top:40px;
-line-height:2;
 }
 
 footer{
@@ -220,6 +220,7 @@ transform:scale(1.1);
 <nav>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
+<a href="#porque">¿Por qué elegirnos?</a>
 <a href="#empresas">Empresas</a>
 <a href="#contacto">Contacto</a>
 </nav>
@@ -228,7 +229,7 @@ transform:scale(1.1);
 <section class="hero" id="inicio">
 <div class="hero-content">
 <h1>Soporte Técnico <span>Empresarial</span> en CDMX</h1>
-<p>Ayudamos a empresas a mantener sus equipos funcionando al máximo rendimiento. Especialistas en mantenimiento, reparación y administración tecnológica.</p>
+<p>Ayudamos a empresas a mantener sus equipos funcionando al máximo rendimiento.</p>
 <a href="#empresas" class="btn">Solicitar Propuesta</a>
 </div>
 </section>
@@ -236,7 +237,6 @@ transform:scale(1.1);
 <section class="section" id="servicios">
 <h2>Nuestros Servicios</h2>
 <div class="grid">
-
 <div class="card">
 <i class="fas fa-laptop-code service-icon"></i>
 <h3>Reparación Profesional</h3>
@@ -260,25 +260,47 @@ transform:scale(1.1);
 <h3>Respaldo y Backup</h3>
 <p>Protección y recuperación de información crítica.</p>
 </div>
+</div>
+</section>
+
+<!-- NUEVA SECCIÓN -->
+<section class="section why" id="porque">
+<h2>¿Por qué elegirnos?</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-user-tie service-icon"></i>
+<h3>Atención Profesional</h3>
+<p>Trato formal, procesos claros y comunicación directa con tu empresa.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-bolt service-icon"></i>
+<h3>Respuesta Rápida</h3>
+<p>Soporte ágil para minimizar tiempos muertos y pérdidas operativas.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-shield-alt service-icon"></i>
+<h3>Seguridad y Confianza</h3>
+<p>Manejo responsable de información crítica y confidencial.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line service-icon"></i>
+<h3>Enfoque Empresarial</h3>
+<p>No solo reparamos equipos, optimizamos la infraestructura tecnológica.</p>
+</div>
 
 </div>
 </section>
 
 <section class="section" id="empresas">
 <h2>Planes Empresariales</h2>
-
-<div class="highlight">
-<p>Ofrecemos planes mensuales de soporte técnico diseñados para pequeñas y medianas empresas en Ciudad de México.</p>
-<br>
-<p>✔ Soporte remoto ilimitado<br>
-✔ Visitas técnicas programadas<br>
-✔ Mantenimiento preventivo<br>
-✔ Administración de equipos<br>
-✔ Asesoría tecnológica</p>
-<br>
-<a href="#contacto" class="btn">Solicitar Cotización</a>
-</div>
-
+<p style="text-align:center;max-width:700px;margin:auto;">
+Planes mensuales diseñados para pequeñas y medianas empresas en CDMX.
+Incluyen soporte remoto, visitas técnicas y mantenimiento preventivo.
+</p>
 </section>
 
 <section class="section" id="contacto">
@@ -296,7 +318,7 @@ transform:scale(1.1);
 </form>
 
 <div class="contact-info">
-<p><i class="fas fa-map-marker-alt"></i> Colonia Obrera, Alcaldía Cuauhtémoc, CDMX</p>
+<p><i class="fas fa-map-marker-alt"></i> Colonia Obrera, CDMX</p>
 <p><i class="fas fa-phone"></i> (77) 5144-9539</p>
 <p><i class="fas fa-envelope"></i> hexalink.tech@gmail.com</p>
 </div>
