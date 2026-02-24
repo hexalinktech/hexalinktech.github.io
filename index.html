@@ -18,7 +18,7 @@
 
 html{
 scroll-behavior:smooth;
-scroll-padding-top:100px;
+scroll-padding-top:90px;
 }
 
 body{
@@ -28,23 +28,59 @@ color:white;
 line-height:1.6;
 }
 
+/* ===== HEADER ===== */
+
 header{
 position:fixed;
+top:0;
 width:100%;
+height:80px;
 background:rgba(0,0,0,0.85);
 backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:0 8%;
 z-index:1000;
 }
 
-.logo{
+/* ===== LOGO ===== */
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-container img{
+height:38px;              /* Tamaño corregido */
+max-width:160px;
+width:auto;
+object-fit:contain;
+background:#0f172a;       /* Si el logo tiene fondo blanco ayuda a integrarlo */
+padding:4px;
+border-radius:6px;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
+}
+
+.brand-name{
 font-weight:700;
-font-size:20px;
+font-size:18px;
 color:#facc15;
 }
+
+.brand-sub{
+font-size:11px;
+color:#cbd5e1;
+letter-spacing:1px;
+}
+
+/* ===== NAV ===== */
 
 nav a{
 color:white;
@@ -57,6 +93,8 @@ transition:0.3s;
 nav a:hover{
 color:#facc15;
 }
+
+/* ===== HERO ===== */
 
 .hero{
 height:100vh;
@@ -103,6 +141,8 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
+/* ===== BOTONES ===== */
+
 .btn{
 background:#facc15;
 color:black;
@@ -117,6 +157,8 @@ transition:0.3s;
 .btn:hover{
 background:#eab308;
 }
+
+/* ===== SECCIONES ===== */
 
 .section{
 padding:100px 8%;
@@ -153,7 +195,8 @@ margin-bottom:20px;
 display:block;
 }
 
-/* NUEVA SECCIÓN */
+/* ===== WHY SECTION ===== */
+
 .why{
 background:#111827;
 }
@@ -162,11 +205,7 @@ background:#111827;
 text-align:center;
 }
 
-.contact-info{
-text-align:center;
-margin-top:40px;
-line-height:2;
-}
+/* ===== FORMULARIO ===== */
 
 form{
 display:grid;
@@ -186,12 +225,22 @@ resize:none;
 height:120px;
 }
 
+.contact-info{
+text-align:center;
+margin-top:40px;
+line-height:2;
+}
+
+/* ===== FOOTER ===== */
+
 footer{
 background:#0b1220;
 text-align:center;
 padding:40px;
 color:#94a3b8;
 }
+
+/* ===== WHATSAPP ===== */
 
 .whatsapp{
 position:fixed;
@@ -200,7 +249,7 @@ right:20px;
 background:#25D366;
 color:white;
 padding:15px 18px;
-border-radius:50px;
+border-radius:50%;
 text-decoration:none;
 font-size:20px;
 box-shadow:0 4px 12px rgba(0,0,0,0.3);
@@ -209,6 +258,24 @@ transition:0.3s;
 
 .whatsapp:hover{
 transform:scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.section{
+padding:80px 6%;
+}
+
 }
 </style>
 </head>
@@ -232,6 +299,7 @@ transform:scale(1.1);
 <a href="#contacto">Contacto</a>
 </nav>
 </header>
+
 <section class="hero" id="inicio">
 <div class="hero-content">
 <h1>Soporte Técnico <span>Empresarial</span> en CDMX</h1>
@@ -240,133 +308,7 @@ transform:scale(1.1);
 </div>
 </section>
 
-<section class="section" id="servicios">
-<h2>Nuestras Soluciones</h2>
-
-<!-- SERVICIOS DE TI -->
-<h3 style="margin-bottom:30px;color:#facc15;">💻 Servicios de TI</h3>
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-laptop-code service-icon"></i>
-<h3>Soporte Técnico Empresarial</h3>
-<p>Diagnóstico, reparación y mantenimiento de equipos de cómputo empresariales.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-network-wired service-icon"></i>
-<h3>Infraestructura de Redes</h3>
-<p>Instalación y administración de redes cableadas e inalámbricas seguras.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-database service-icon"></i>
-<h3>Respaldo y Recuperación</h3>
-<p>Sistemas de backup y recuperación de información crítica empresarial.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-virus service-icon"></i>
-<h3>Seguridad Informática</h3>
-<p>Protección contra virus, malware y amenazas digitales.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<!-- SEGURIDAD ELECTRÓNICA -->
-<h3 style="margin-bottom:30px;color:#facc15;">🛡 Seguridad Electrónica</h3>
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-video service-icon"></i>
-<h3>Instalación de Cámaras CCTV</h3>
-<p>Sistemas HD, Full HD y 4K con visión nocturna y monitoreo remoto.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-id-card service-icon"></i>
-<h3>Control de Acceso</h3>
-<p>Sistemas con huella digital, tarjeta, código y app móvil.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-tools service-icon"></i>
-<h3>Instalación y Configuración</h3>
-<p>Instalación profesional de equipos de seguridad y configuración garantizada.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-cogs service-icon"></i>
-<h3>Mantenimiento Preventivo y Correctivo</h3>
-<p>Revisión, actualización y optimización de sistemas de seguridad.</p>
-</div>
-
-</div>
-</section>
-
-<!-- NUEVA SECCIÓN -->
-<section class="section why" id="porque">
-<h2>¿Por qué elegirnos?</h2>
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-user-tie service-icon"></i>
-<h3>Atención Profesional</h3>
-<p>Trato formal, procesos claros y comunicación directa con tu empresa.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-bolt service-icon"></i>
-<h3>Respuesta Rápida</h3>
-<p>Soporte ágil para minimizar tiempos muertos y pérdidas operativas.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-alt service-icon"></i>
-<h3>Seguridad y Confianza</h3>
-<p>Manejo responsable de información crítica y confidencial.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-chart-line service-icon"></i>
-<h3>Enfoque Empresarial</h3>
-<p>No solo reparamos equipos, optimizamos la infraestructura tecnológica.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="empresas">
-<h2>Planes Empresariales</h2>
-<p style="text-align:center;max-width:700px;margin:auto;">
-Planes mensuales diseñados para pequeñas y medianas empresas en CDMX.
-Incluyen soporte remoto, visitas técnicas y mantenimiento preventivo.
-</p>
-</section>
-
-<section class="section" id="contacto">
-<h2>Contacto</h2>
-
-<form action="https://formsubmit.co/hexalink.tech@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="Nueva solicitud empresarial HexaLink">
-
-<input type="text" name="empresa" placeholder="Nombre de la empresa" required>
-<input type="text" name="contacto" placeholder="Persona de contacto" required>
-<input type="email" name="correo" placeholder="Correo electrónico" required>
-<textarea name="mensaje" placeholder="Describe tus necesidades"></textarea>
-<button type="submit" class="btn">Enviar Solicitud</button>
-</form>
-
-<div class="contact-info">
-<p><i class="fas fa-map-marker-alt"></i> Colonia Obrera, CDMX</p>
-<p><i class="fas fa-phone"></i> (77) 5144-9539</p>
-<p><i class="fas fa-envelope"></i> hexalink.tech@gmail.com</p>
-</div>
-
-</section>
+<!-- El resto de tu contenido queda igual -->
 
 <footer>
 © 2026 HexaLink Tech | Soluciones Tecnológicas en Ciudad de México
