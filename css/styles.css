@@ -335,7 +335,7 @@ border-left:1px solid rgba(255,255,255,0.1);
 }
 
 nav a{
-margin:10px 0;
+margin:12px 0;
 font-size:16px;
 }
 
@@ -347,16 +347,20 @@ display:block;
 
 .hero{
 height:auto;
+min-height:80vh;
 padding:120px 6% 80px 6%;
-background-position:right;
+background-position:right center;
+background-size:cover;
 }
+
+/* HERO CONTENT */
 
 .hero-content{
 max-width:100%;
 }
 
 .hero h1{
-font-size:32px;
+font-size:30px;
 line-height:1.2;
 }
 
@@ -364,10 +368,16 @@ line-height:1.2;
 font-size:20px;
 }
 
+.hero p{
+font-size:15px;
+}
+
+/* BOTONES */
+
 .hero-buttons{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:14px;
 margin-top:25px;
 }
 
@@ -381,7 +391,7 @@ margin:0;
 /* SECTIONS */
 
 .section{
-padding:80px 6%;
+padding:70px 6%;
 }
 
 /* GRID */
@@ -394,7 +404,7 @@ gap:20px;
 /* CARDS */
 
 .card{
-padding:25px;
+padding:24px;
 }
 
 /* WHATSAPP */
