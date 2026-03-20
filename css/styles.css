@@ -247,3 +247,31 @@ body{
 opacity:0;
 transition 0.6s ease;
 }
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+nav{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
