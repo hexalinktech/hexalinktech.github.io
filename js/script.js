@@ -12,7 +12,7 @@ nav.classList.toggle("active");
 }
 
 /* =========================
-SCROLL REVEAL ANIMATIONS
+SCROLL REVEAL
 ========================= */
 
 function revealOnScroll() {
@@ -63,6 +63,7 @@ class Particle {
 
 ```
 constructor() {
+
   this.x = Math.random() * canvas.width;
   this.y = Math.random() * canvas.height;
 
@@ -70,6 +71,7 @@ constructor() {
 
   this.speedX = Math.random() * 0.5 - 0.25;
   this.speedY = Math.random() * 0.5 - 0.25;
+
 }
 
 update() {
@@ -77,13 +79,8 @@ update() {
   this.x += this.speedX;
   this.y += this.speedY;
 
-  if (this.x < 0 || this.x > canvas.width) {
-    this.speedX *= -1;
-  }
-
-  if (this.y < 0 || this.y > canvas.height) {
-    this.speedY *= -1;
-  }
+  if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+  if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
 
 }
 
@@ -91,7 +88,7 @@ draw() {
 
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(250, 204, 21, 0.7)";
+  ctx.fillStyle = "rgba(250,204,21,0.7)";
   ctx.fill();
 
 }
@@ -114,11 +111,11 @@ for (let i = 0; i < particleCount; i++) {
 function animateParticles() {
 
 ```
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
-particles.forEach((particle) => {
-  particle.update();
-  particle.draw();
+particles.forEach(p => {
+  p.update();
+  p.draw();
 });
 
 requestAnimationFrame(animateParticles);
