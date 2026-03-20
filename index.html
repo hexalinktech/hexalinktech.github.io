@@ -6,54 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HexaLink Tech | Soporte Técnico Empresarial en CDMX</title>
-
-<meta name="description" content="Soporte técnico empresarial en CDMX. Administración de infraestructura tecnológica, redes, seguridad informática y CCTV para empresas en Ciudad de México.">
-
-<meta name="keywords" content="soporte técnico CDMX, soporte TI empresas, mantenimiento computadoras CDMX, redes empresariales, seguridad informática CDMX">
-
-<meta name="author" content="HexaLink Tech">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://hexalinktech.github.io/">
-
-<!-- FAVICON -->
+<title>HexaLink Tech | Soporte Técnico Empresarial</title>
 
 <link rel="icon" href="images/favicon.ico">
 
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-
-<!-- OpenGraph -->
-
-<meta property="og:title" content="HexaLink Tech | Soporte Técnico Empresarial CDMX">
-
-<meta property="og:description" content="Infraestructura tecnológica, redes empresariales, soporte técnico y seguridad informática para empresas en Ciudad de México.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url" content="https://hexalinktech.github.io">
-
-<meta property="og:image" content="https://hexalinktech.github.io/images/logo.png">
-
-<!-- Seguridad -->
-
-<meta http-equiv="Content-Security-Policy"
-content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self';">
-
-<!-- Google Fonts -->
+<link rel="stylesheet" href="css/styles.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- FontAwesome -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- CSS -->
-
-<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -62,18 +23,18 @@ content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsa
 <header>
 
 <div class="logo">
-
-<img src="images/logo.png" alt="HexaLink Tech">
-
+<img src="images/logo.png">
 <span>HexaLink Tech</span>
+</div>
 
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
 </div>
 
 <nav>
 
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
-<a href="#porque">¿Por qué elegirnos?</a>
 <a href="#empresas">Empresas</a>
 <a href="#contacto">Contacto</a>
 
@@ -81,204 +42,90 @@ content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsa
 
 </header>
 
-<!-- HERO -->
 
 <section class="hero" id="inicio">
 
+<canvas id="particles"></canvas>
+
 <div class="hero-content">
 
-<h1>Soporte Técnico <span>Empresarial</span> en CDMX</h1>
+<h1>
+Soporte Técnico <span>Empresarial</span>
+</h1>
+
+<h2>EN CDMX</h2>
 
 <p>
-Ayudamos a empresas a mantener su infraestructura tecnológica funcionando con máximo rendimiento y seguridad.
+Infraestructura tecnológica, redes empresariales y soporte TI profesional.
 </p>
 
-<a href="#empresas" class="btn">
-Solicitar Propuesta
+<div class="hero-buttons">
+
+<a href="#contacto" class="btn glow">
+Solicitar Diagnóstico
 </a>
 
-<a href="#contacto" class="btn btn-secondary">
-Contactar Ahora
+<a href="#empresas" class="btn-outline">
+Planes Empresariales
 </a>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- SERVICIOS -->
 
-<section class="section" id="servicios" aria-labelledby="servicios-title">
+<section class="section" id="servicios">
 
-<h2 id="servicios-title">Nuestras Soluciones</h2>
-
-<h3 class="category-title">💻 Servicios de TI</h3>
+<h2>Nuestras Soluciones</h2>
 
 <div class="grid">
 
-<div class="card">
-<i class="fas fa-laptop-code service-icon"></i>
-<h3>Soporte Técnico Empresarial</h3>
-<p>Diagnóstico, reparación y mantenimiento de equipos empresariales.</p>
+<div class="card reveal">
+<i class="fas fa-laptop-code"></i>
+<h3>Soporte Técnico</h3>
+<p>Mantenimiento y reparación de equipos empresariales.</p>
 </div>
 
-<div class="card">
-<i class="fas fa-network-wired service-icon"></i>
+<div class="card reveal">
+<i class="fas fa-network-wired"></i>
 <h3>Infraestructura de Redes</h3>
-<p>Diseño, instalación y administración de redes empresariales.</p>
+<p>Diseño e instalación de redes empresariales.</p>
 </div>
 
-<div class="card">
-<i class="fas fa-database service-icon"></i>
-<h3>Respaldo y Recuperación</h3>
-<p>Implementación de sistemas de backup y recuperación de datos.</p>
+<div class="card reveal">
+<i class="fas fa-database"></i>
+<h3>Backup Empresarial</h3>
+<p>Respaldo y recuperación de información crítica.</p>
 </div>
 
-<div class="card">
-<i class="fas fa-shield-virus service-icon"></i>
-<h3>Seguridad Informática</h3>
-<p>Protección contra malware, ransomware y amenazas digitales.</p>
-</div>
-
-</div>
-
-<h3 class="category-title">🛡 Seguridad Electrónica</h3>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-video service-icon"></i>
-<h3>Cámaras CCTV</h3>
-<p>Sistemas HD, Full HD y 4K con monitoreo remoto empresarial.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-id-card service-icon"></i>
-<h3>Control de Acceso</h3>
-<p>Sistemas de acceso con huella, tarjeta o app móvil.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-tools service-icon"></i>
-<h3>Instalación Profesional</h3>
-<p>Instalación certificada y configuración segura.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-cogs service-icon"></i>
-<h3>Mantenimiento Preventivo</h3>
-<p>Optimización continua de sistemas tecnológicos.</p>
+<div class="card reveal">
+<i class="fas fa-video"></i>
+<h3>CCTV</h3>
+<p>Sistemas de videovigilancia profesional.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PORQUE -->
-
-<section class="section why" id="porque">
-
-<h2>¿Por qué elegirnos?</h2>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-user-tie service-icon"></i>
-<h3>Atención Profesional</h3>
-<p>Procesos claros y comunicación directa con tu empresa.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-bolt service-icon"></i>
-<h3>Respuesta Rápida</h3>
-<p>Soporte ágil para minimizar tiempos muertos.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-alt service-icon"></i>
-<h3>Seguridad y Confianza</h3>
-<p>Manejo responsable de información empresarial.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-chart-line service-icon"></i>
-<h3>Enfoque Empresarial</h3>
-<p>Optimización constante de infraestructura tecnológica.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- EMPRESAS -->
-
-<section class="section" id="empresas">
-
-<h2>Planes Empresariales</h2>
-
-<p class="center-text">
-
-Planes mensuales diseñados para pequeñas y medianas empresas en CDMX.
-
-Incluyen soporte remoto, visitas técnicas y mantenimiento preventivo.
-
-</p>
-
-</section>
-
-<!-- CONTACTO -->
-
-<section class="section" id="contacto">
-
-<h2>Contacto</h2>
-
-<form action="https://formsubmit.co/hexalink.tech@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="true">
-
-<input type="hidden" name="_subject" value="Nueva solicitud empresarial HexaLink">
-
-<input type="text" name="_honey" style="display:none">
-
-<input type="text" name="empresa" placeholder="Nombre de la empresa" required>
-
-<input type="text" name="contacto" placeholder="Persona de contacto" required>
-
-<input type="email" name="correo" placeholder="Correo electrónico" required>
-
-<textarea name="mensaje" placeholder="Describe tus necesidades"></textarea>
-
-<button type="submit" class="btn">
-Enviar Solicitud
-</button>
-
-</form>
-
-<div class="contact-info">
-
-<p><i class="fas fa-map-marker-alt"></i> Colonia Obrera, CDMX</p>
-
-<p><i class="fas fa-phone"></i> (77) 5144-9539</p>
-
-<p><i class="fas fa-envelope"></i> hexalink.tech@gmail.com</p>
-
-</div>
-
-</section>
 
 <footer>
 
-© 2026 HexaLink Tech | Ingeniería y Soluciones Tecnológicas en Ciudad de México
+© 2026 HexaLink Tech
 
 </footer>
 
+
 <a class="whatsapp"
-href="https://wa.me/527751449539?text=Hola%20quiero%20información%20sobre%20soporte%20empresarial"
-target="_blank"
-rel="noopener noreferrer">
+href="https://wa.me/527751449539"
+target="_blank">
 
 <i class="fab fa-whatsapp"></i>
 
 </a>
+
 
 <script src="js/script.js"></script>
 
