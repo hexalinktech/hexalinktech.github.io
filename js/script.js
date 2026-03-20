@@ -53,7 +53,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 }
 
-resizeCanvas();
+  resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 class Particle {
