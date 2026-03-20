@@ -1,75 +1,96 @@
-// MENU MOVIL
+/* =========================
+MENU MOVIL
+========================= */
 
-const toggle = document.querySelector(".menu-toggle");
+const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
-toggle.onclick = () =>{
+if (menuToggle) {
+menuToggle.addEventListener("click", () => {
 nav.classList.toggle("active");
+});
 }
 
+/* =========================
+SCROLL REVEAL ANIMATIONS
+========================= */
 
-// SCROLL ANIMATION
+function revealOnScroll() {
 
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () =>{
+reveals.forEach((element) => {
 
-reveals.forEach(el =>{
-
-const top = el.getBoundingClientRect().top;
+```
 const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+const revealPoint = 100;
 
-if(top < windowHeight - 100){
-
-el.classList.add("active");
-
+if (elementTop < windowHeight - revealPoint) {
+  element.classList.add("active");
 }
+```
 
-})
-
-})
-
-
-// PARTICLES
-
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<80;i++){
-
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-size:Math.random()*2,
-speedX:(Math.random()-0.5)*0.5,
-speedY:(Math.random()-0.5)*0.5
 });
 
 }
 
-function animate(){
+window.addEventListener("scroll", revealOnScroll);
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+/* =========================
+PARTICLES BACKGROUND
+========================= */
 
-particles.forEach(p=>{
+const canvas = document.getElementById("particles");
 
-p.x+=p.speedX;
-p.y+=p.speedY;
+if (canvas) {
 
-ctx.fillStyle="rgba(255,255,255,0.5)";
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-ctx.fill();
+const ctx = canvas.getContext("2d");
 
-})
+let particles = [];
+const particleCount = 80;
 
-requestAnimationFrame(animate);
+function resizeCanvas() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+
+window.addEventListener("resize", resizeCanvas);
+
+class Particle {
+
+```
+constructor() {
+
+  this.x = Math.random() * canvas.width;
+  this.y = Math.random() * canvas.height;
+
+  this.size = Math.random() * 2 + 1;
+
+  this.speedX = Math.random() * 0.5 - 0.25;
+  this.speedY = Math.random() * 0.5 - 0.25;
 
 }
 
-animate();
+update() {
+
+  this.x += this.speedX;
+  this.y += this.speedY;
+
+  if (this.x < 0 || this.x > canvas.width) {
+    this.speedX *= -1;
+  }
+
+  if (this.y < 0 || this.y > canvas.height) {
+    this.speedY *= -1;
+  }
+
+}
+
+draw() {
+
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI
+```
