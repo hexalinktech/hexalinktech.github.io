@@ -63,7 +63,6 @@ class Particle {
 
 ```
 constructor() {
-
   this.x = Math.random() * canvas.width;
   this.y = Math.random() * canvas.height;
 
@@ -71,7 +70,6 @@ constructor() {
 
   this.speedX = Math.random() * 0.5 - 0.25;
   this.speedY = Math.random() * 0.5 - 0.25;
-
 }
 
 update() {
@@ -92,8 +90,47 @@ update() {
 draw() {
 
   ctx.beginPath();
-  ctx.arc(this.x, this.y, this.size, 0, Math.PI
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+  ctx.fillStyle = "rgba(250, 204, 21, 0.7)";
+  ctx.fill();
+
+}
 ```
+
+}
+
+function initParticles() {
+
+```
+particles = [];
+
+for (let i = 0; i < particleCount; i++) {
+  particles.push(new Particle());
+}
+```
+
+}
+
+function animateParticles() {
+
+```
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+particles.forEach((particle) => {
+  particle.update();
+  particle.draw();
+});
+
+requestAnimationFrame(animateParticles);
+```
+
+}
+
+initParticles();
+animateParticles();
+
+}
+
 /* =========================
 NAVBAR SCROLL EFFECT
 ========================= */
@@ -109,6 +146,7 @@ header.classList.remove("scrolled");
 }
 
 });
+
 /* =========================
 PAGE FADE IN
 ========================= */
