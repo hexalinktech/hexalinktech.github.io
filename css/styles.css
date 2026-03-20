@@ -25,6 +25,8 @@ backdrop-filter:blur(8px);
 z-index:1000;
 }
 
+/* LOGO */
+
 .logo{
 display:flex;
 align-items:center;
@@ -34,14 +36,22 @@ font-weight:600;
 }
 
 .logo img{
-height:32px;
+height:36px;
+width:auto;
 }
+
+/* NAV */
 
 nav a{
 margin-left:30px;
 text-decoration:none;
 color:white;
 font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#facc15;
 }
 
 .menu-toggle{
@@ -53,20 +63,37 @@ font-size:24px;
 
 .hero{
 height:100vh;
-background:url("../images/hero-bg.jpg") center/cover no-repeat;
+margin-top:80px;
+background-image:url("../images/hero-bg.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 display:flex;
 align-items:center;
 padding:0 8%;
 position:relative;
+overflow:hidden;
 }
+
+/* HERO OVERLAY */
 
 .hero::before{
 content:"";
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
-background:linear-gradient(90deg,#000000dd 40%,transparent);
+background:linear-gradient(
+90deg,
+rgba(0,0,0,0.85) 30%,
+rgba(0,0,0,0.2) 70%,
+transparent
+);
+z-index:1;
 }
+
+/* HERO CONTENT */
 
 .hero-content{
 position:relative;
@@ -102,6 +129,11 @@ border-radius:6px;
 text-decoration:none;
 font-weight:600;
 margin-right:10px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
 }
 
 .btn-outline{
@@ -110,10 +142,16 @@ color:#facc15;
 padding:14px 28px;
 border-radius:6px;
 text-decoration:none;
+transition:0.3s;
+}
+
+.btn-outline:hover{
+background:#facc15;
+color:black;
 }
 
 .glow{
-box-shadow:0 0 20px #facc15;
+box-shadow:0 0 15px #facc15,0 0 30px #facc15;
 }
 
 /* SECTIONS */
@@ -122,11 +160,15 @@ box-shadow:0 0 20px #facc15;
 padding:120px 8%;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
+
+/* CARDS */
 
 .card{
 background:#111827;
@@ -157,6 +199,7 @@ padding:16px;
 border-radius:50%;
 color:white;
 font-size:22px;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* PARTICLES */
@@ -167,5 +210,28 @@ width:100%;
 height:100%;
 top:0;
 left:0;
-z-index:1;
+z-index:0;
+pointer-events:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero{
+padding-top:120px;
+}
+
 }
