@@ -109,3 +109,12 @@ header.classList.remove("scrolled");
 }
 
 });
+/* =========================
+PAGE FADE IN
+========================= */
+
+window.addEventListener("load", () => {
+
+document.body.style.opacity = "1";
+
+});
