@@ -306,5 +306,104 @@ padding-top:120px;
 .hero h1{
 font-size:34px;
 }
+/* ========================= */
+/* RESPONSIVE MOVIL */
+/* ========================= */
+
+@media (max-width:768px){
+
+header{
+padding:15px 6%;
+}
+
+/* MENU */
+
+nav{
+display:none;
+}
+
+nav.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:0;
+background:#050816;
+padding:20px;
+width:220px;
+border-left:1px solid rgba(255,255,255,0.1);
+}
+
+nav a{
+margin:10px 0;
+font-size:16px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+/* HERO */
+
+.hero{
+height:auto;
+padding:120px 6% 80px 6%;
+background-position:right;
+}
+
+.hero-content{
+max-width:100%;
+}
+
+.hero h1{
+font-size:32px;
+line-height:1.2;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+.hero-buttons{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:25px;
+}
+
+.btn,
+.btn-outline{
+width:100%;
+text-align:center;
+margin:0;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 6%;
+}
+
+/* GRID */
+
+.grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+/* CARDS */
+
+.card{
+padding:25px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+bottom:15px;
+right:15px;
+font-size:20px;
+padding:14px;
+}
 
 }
