@@ -21,15 +21,13 @@ const reveals = document.querySelectorAll(".reveal");
 
 reveals.forEach((element) => {
 
-```
 const windowHeight = window.innerHeight;
 const elementTop = element.getBoundingClientRect().top;
 const revealPoint = 100;
 
 if (elementTop < windowHeight - revealPoint) {
-  element.classList.add("active");
+element.classList.add("active");
 }
-```
 
 });
 
@@ -56,70 +54,63 @@ canvas.height = window.innerHeight;
 }
 
 resizeCanvas();
-
 window.addEventListener("resize", resizeCanvas);
 
 class Particle {
 
-```
-constructor() {
+constructor(){
 
-  this.x = Math.random() * canvas.width;
-  this.y = Math.random() * canvas.height;
+this.x = Math.random() * canvas.width;
+this.y = Math.random() * canvas.height;
 
-  this.size = Math.random() * 2 + 1;
+this.size = Math.random() * 2 + 1;
 
-  this.speedX = Math.random() * 0.5 - 0.25;
-  this.speedY = Math.random() * 0.5 - 0.25;
-
-}
-
-update() {
-
-  this.x += this.speedX;
-  this.y += this.speedY;
-
-  if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-  if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+this.speedX = Math.random() * 0.5 - 0.25;
+this.speedY = Math.random() * 0.5 - 0.25;
 
 }
 
-draw() {
+update(){
 
-  ctx.beginPath();
-  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(250,204,21,0.7)";
-  ctx.fill();
+this.x += this.speedX;
+this.y += this.speedY;
 
-}
-```
+if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
 
 }
 
-function initParticles() {
+draw(){
 
-```
+ctx.beginPath();
+ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+ctx.fillStyle = "rgba(250,204,21,0.7)";
+ctx.fill();
+
+}
+
+}
+
+function initParticles(){
+
 particles = [];
 
-for (let i = 0; i < particleCount; i++) {
-  particles.push(new Particle());
-}
-```
-
+for(let i=0;i<particleCount;i++){
+particles.push(new Particle());
 }
 
-function animateParticles() {
+}
 
-```
+function animateParticles(){
+
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
 particles.forEach(p => {
-  p.update();
-  p.draw();
+p.update();
+p.draw();
 });
 
 requestAnimationFrame(animateParticles);
-```
 
 }
 
@@ -136,20 +127,10 @@ const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 
-if (window.scrollY > 50) {
+if (window.scrollY > 50){
 header.classList.add("scrolled");
-} else {
+}else{
 header.classList.remove("scrolled");
 }
-
-});
-
-/* =========================
-PAGE FADE IN
-========================= */
-
-window.addEventListener("load", () => {
-
-document.body.style.opacity = "1";
 
 });
