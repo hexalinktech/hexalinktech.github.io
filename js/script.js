@@ -94,3 +94,18 @@ draw() {
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.size, 0, Math.PI
 ```
+/* =========================
+NAVBAR SCROLL EFFECT
+========================= */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+if (window.scrollY > 50) {
+header.classList.add("scrolled");
+} else {
+header.classList.remove("scrolled");
+}
+
+});
