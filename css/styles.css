@@ -1,5 +1,171 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-background:#0f172a;
+font-family:'Poppins',sans-serif;
+background:#050816;
 color:white;
-font-family:Poppins, sans-serif;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:600;
+}
+
+.logo img{
+height:32px;
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+font-size:15px;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:url("../images/hero-bg.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:0 8%;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,#000000dd 40%,transparent);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:600px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#facc15;
+}
+
+.hero h2{
+color:#facc15;
+margin-bottom:20px;
+}
+
+.hero-buttons{
+margin-top:30px;
+}
+
+/* BOTONES */
+
+.btn{
+background:#facc15;
+color:black;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-right:10px;
+}
+
+.btn-outline{
+border:2px solid #facc15;
+color:#facc15;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.glow{
+box-shadow:0 0 20px #facc15;
+}
+
+/* SECTIONS */
+
+.section{
+padding:120px 8%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.card i{
+font-size:40px;
+color:#facc15;
+margin-bottom:20px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+color:white;
+font-size:22px;
+}
+
+/* PARTICLES */
+
+#particles{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:1;
 }
