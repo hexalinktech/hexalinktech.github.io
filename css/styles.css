@@ -197,15 +197,19 @@ transform:translateY(0);
 }
 
 card i{
-font-size:32px;
+.card i{
+font-size:34px;
 margin-bottom:15px;
 color:#facc15;
 transition:0.35s;
+filter:drop-shadow(0 0 4px rgba(250,204,21,0.5));
 }
 
-.card i{
-transform(1.25);
-filter(0 0 8px rgba(250,204,21,0.7));
+.card:hover i{
+transform:scale(1.25);
+filter:
+drop-shadow(0 0 8px rgba(250,204,21,0.9))
+drop-shadow(0 0 18px rgba(250,204,21,0.5));
 }
 
 .card:hover{
