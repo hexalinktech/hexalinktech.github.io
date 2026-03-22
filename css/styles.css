@@ -28,17 +28,22 @@ z-index:1000;
 
 /* LOGO */
 
-.logo{
+.logo {
 display:flex;
 align-items:center;
 gap:10px;
-font-size:20px;
 font-weight:600;
 }
 
-.logo img{
-height:36px;
-width:auto;
+.logo-img{
+height:45px;
+opacity:0.85;
+transition:all .3s ease;
+}
+
+.logo-img:hover{
+opacity:1;
+transform:scale(1.05);
 }
 
 /* NAV */
