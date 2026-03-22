@@ -13,17 +13,17 @@ entry.target.classList.add("show");
 });
 });
 
-const elements = document.querySelectorAll(".card");
+const elements=document.querySelectorAll(".card");
 
 elements.forEach(el=>{
 observer.observe(el);
 });
 
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
 let particles=[];
 
