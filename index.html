@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
@@ -22,20 +23,18 @@
 
 <body>
 
-<header>
+<header class="header">
+
+<div class="container nav-container">
 
 <div class="logo">
-<img src="images/hexalink-icon.svg" class="logo-img">
+<img src="images/hexalink-icon.svg" class="logo-img" alt="HexaLink">
 <span>HexaLink Tech</span>
 </div>
 
-<nav id="nav">
+<nav class="nav" id="nav">
 
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#porque">¿Por qué elegirnos?</a>
-<a href="#empresas">Empresas</a>
-<a href="#contacto">Contacto</a>
+<a href="#inicio">Inicio</a> <a href="#servicios">Servicios</a> <a href="#porque">¿Por qué elegirnos?</a> <a href="#contacto">Contacto</a>
 
 </nav>
 
@@ -43,15 +42,19 @@
 <i class="fas fa-bars"></i>
 </div>
 
+</div>
+
 </header>
 
 <section class="hero" id="inicio">
 
-<canvas id="particles"></canvas>
+<div class="container hero-grid">
 
 <div class="hero-content">
 
-<h1>Soporte Técnico <span>Empresarial</span> en CDMX</h1>
+<h1>
+Soporte Técnico <span>Empresarial</span> en CDMX
+</h1>
 
 <p>
 Ayudamos a empresas a mantener su infraestructura tecnológica funcionando al máximo rendimiento.
@@ -61,93 +64,77 @@ Ayudamos a empresas a mantener su infraestructura tecnológica funcionando al m�
 
 </div>
 
+</div>
+
 </section>
 
-<section class="section" id="servicios">
+<section class="services" id="servicios">
 
-<h2>Nuestras Soluciones</h2>
+<div class="container">
 
-<div class="grid">
+<h2 class="section-title">Nuestras Soluciones</h2>
+
+<div class="services-grid">
 
 <div class="card">
-<i class="fas fa-laptop-code service-icon"></i>
-<h3>Soporte Técnico Empresarial</h3>
-<p>Diagnóstico y mantenimiento de equipos.</p>
+<i class="fas fa-laptop-code"></i>
+<h3>Soporte Técnico</h3>
+<p>Diagnóstico, mantenimiento y optimización de equipos empresariales.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-network-wired service-icon"></i>
-<h3>Infraestructura de Redes</h3>
-<p>Instalación y administración de redes.</p>
+<i class="fas fa-network-wired"></i>
+<h3>Infraestructura de Red</h3>
+<p>Instalación y administración de redes empresariales.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-database service-icon"></i>
-<h3>Respaldo de Información</h3>
-<p>Sistemas de backup empresarial.</p>
+<i class="fas fa-database"></i>
+<h3>Respaldo de Datos</h3>
+<p>Sistemas de respaldo y recuperación de información.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-shield-virus service-icon"></i>
+<i class="fas fa-shield-virus"></i>
 <h3>Seguridad Informática</h3>
-<p>Protección contra amenazas digitales.</p>
+<p>Protección contra amenazas y vulnerabilidades.</p>
 </div>
 
-</div>
-
-</section>
-
-<section class="section why" id="porque">
-
-<h2>¿Por qué elegirnos?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Atención Profesional</h3>
-<p>Comunicación clara y procesos profesionales.</p>
-</div>
-
-<div class="card">
-<h3>Respuesta Rápida</h3>
-<p>Soporte técnico ágil.</p>
-</div>
-
-<div class="card">
-<h3>Seguridad</h3>
-<p>Protección de información empresarial.</p>
-</div>
-
-<div class="card">
-<h3>Optimización</h3>
-<p>Mejor rendimiento tecnológico.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="contacto">
+<section class="contact" id="contacto">
 
-<h2>Contacto</h2>
+<div class="container">
+
+<h2 class="section-title">Contacto</h2>
 
 <form action="https://formsubmit.co/hexalink.tech@gmail.com" method="POST">
 
 <input type="text" name="empresa" placeholder="Empresa" required>
-<input type="text" name="contacto" placeholder="Contacto" required>
+
 <input type="email" name="correo" placeholder="Correo" required>
 
-<textarea name="mensaje" placeholder="Describe tu proyecto"></textarea>
+<textarea name="mensaje" placeholder="Describe tu necesidad"></textarea>
 
 <button class="btn">Enviar</button>
 
 </form>
 
+</div>
+
 </section>
 
 <footer>
 
+<div class="container">
+
 <p>© 2026 HexaLink Tech</p>
+
+</div>
 
 </footer>
 
