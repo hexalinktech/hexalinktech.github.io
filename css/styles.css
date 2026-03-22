@@ -4,6 +4,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:Poppins,sans-serif;
 background:#0f172a;
@@ -11,7 +15,7 @@ color:white;
 }
 
 .container{
-max-width:1200px;
+max-width:1280px;
 margin:auto;
 padding:0 20px;
 }
@@ -43,8 +47,7 @@ color:#facc15;
 }
 
 .logo-img{
-height:42px;
-background:transparent;
+height:38px;
 }
 
 .nav{
@@ -81,7 +84,7 @@ position:relative;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.65);
 }
 
 .hero-grid{
@@ -92,11 +95,11 @@ position:relative;
 }
 
 .hero-content{
-max-width:500px;
+max-width:520px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:54px;
 line-height:1.2;
 margin-bottom:20px;
 }
@@ -123,7 +126,7 @@ transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
 box-shadow:0 10px 20px rgba(0,0,0,.4);
 }
 
@@ -141,7 +144,7 @@ background:#111827;
 .section-title{
 text-align:center;
 margin-bottom:60px;
-font-size:36px;
+font-size:38px;
 }
 
 .services-grid{
