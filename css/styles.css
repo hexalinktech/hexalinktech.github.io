@@ -72,7 +72,7 @@ cursor:pointer;
 min-height:100vh;
 display:flex;
 align-items:center;
-background:url('../images/hero-bg.jpg') center/cover no-repeat;
+background:url('../images/hero-bg.jpg') center/cover no-repeat fixed;
 position:relative;
 }
 
@@ -132,6 +132,11 @@ box-shadow:0 10px 20px rgba(0,0,0,.4);
 padding:120px 0;
 }
 
+.why{
+padding:120px 0;
+background:#111827;
+}
+
 .section-title{
 text-align:center;
 margin-bottom:60px;
@@ -149,7 +154,14 @@ background:#1e293b;
 padding:30px;
 border-radius:12px;
 text-align:center;
-transition:.3s;
+transition:.4s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card i{
@@ -167,7 +179,6 @@ background:#293548;
 
 .contact{
 padding:120px 0;
-background:#111827;
 }
 
 form{
@@ -190,6 +201,30 @@ footer{
 padding:40px 0;
 text-align:center;
 background:#020617;
+}
+
+/* WHATSAPP */
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index:999;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
 }
 
 /* RESPONSIVE */
