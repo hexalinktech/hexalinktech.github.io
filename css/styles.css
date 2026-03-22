@@ -177,31 +177,6 @@ transform:translateY(-6px);
 background:#293548;
 }
 
-.clients{
-padding:100px 0;
-background:#0b1220;
-}
-
-.clients-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-}
-
-.client{
-padding:30px;
-border:1px solid rgba(255,255,255,0.05);
-border-radius:10px;
-text-align:center;
-color:#94a3b8;
-transition:0.3s;
-}
-
-.client:hover{
-border-color:#facc15;
-color:white;
-}
-
 .contact{
 padding:120px 0;
 }
