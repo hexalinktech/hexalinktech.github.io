@@ -20,8 +20,6 @@ margin:auto;
 padding:0 20px;
 }
 
-/* NAVBAR */
-
 .header{
 position:fixed;
 width:100%;
@@ -48,6 +46,12 @@ color:#facc15;
 
 .logo-img{
 height:38px;
+filter:drop-shadow(0 0 6px rgba(255,200,0,0.4));
+transition:0.3s;
+}
+
+.logo-img:hover{
+filter:drop-shadow(0 0 12px rgba(255,200,0,0.9));
 }
 
 .nav{
@@ -58,8 +62,7 @@ gap:25px;
 .nav a{
 color:white;
 text-decoration:none;
-font-weight:500;
-transition:.3s;
+transition:0.3s;
 }
 
 .nav a:hover
@@ -69,8 +72,6 @@ display:none;
 font-size:24px;
 cursor:pointer;
 }
-
-/* HERO */
 
 .hero{
 min-height:100vh;
@@ -96,11 +97,12 @@ position:relative;
 
 .hero-content{
 max-width:520px;
+position:relative;
+z-index:2;
 }
 
 .hero h1{
 font-size:54px;
-line-height:1.2;
 margin-bottom:20px;
 }
 
@@ -113,8 +115,6 @@ margin-bottom:30px;
 color:#cbd5e1;
 }
 
-/* BUTTON */
-
 .btn{
 background:#facc15;
 color:black;
@@ -122,15 +122,13 @@ padding:14px 28px;
 border-radius:8px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
+transition:0.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,.4);
+box-shadow:0 0 20px rgba(250,204,21,0.6);
 }
-
-/* SERVICES */
 
 .services{
 padding:120px 0;
@@ -179,7 +177,30 @@ transform:translateY(-6px);
 background:#293548;
 }
 
-/* CONTACT */
+.clients{
+padding:100px 0;
+background:#0b1220;
+}
+
+.clients-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+.client{
+padding:30px;
+border:1px solid rgba(255,255,255,0.05);
+border-radius:10px;
+text-align:center;
+color:#94a3b8;
+transition:0.3s;
+}
+
+.client:hover{
+border-color:#facc15;
+color:white;
+}
 
 .contact{
 padding:120px 0;
@@ -199,15 +220,11 @@ border:none;
 border-radius:6px;
 }
 
-/* FOOTER */
-
 footer{
 padding:40px 0;
 text-align:center;
 background:#020617;
 }
-
-/* WHATSAPP */
 
 .whatsapp-btn{
 position:fixed;
@@ -224,14 +241,16 @@ justify-content:center;
 border-radius:50%;
 box-shadow:0 8px 20px rgba(0,0,0,0.4);
 z-index:999;
-transition:.3s;
 }
 
-.whatsapp-btn:hover{
-transform:scale(1.1);
+#particles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:900px){
 
