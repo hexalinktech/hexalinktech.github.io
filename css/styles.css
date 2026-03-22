@@ -150,9 +150,31 @@ background:#1e293b;
 padding:30px;
 border-radius:12px;
 text-align:center;
-transition:.4s;
+transition:0.35s;
 opacity:0;
 transform:translateY(30px);
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.04);
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:-2px;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(250,204,21,0.6),
+transparent
+);
+opacity:0;
+transition:0.4s;
+filter:blur(10px);
+}
+
+.card:hover::before{
+opacity:1;
 }
 
 .card.show{
@@ -160,11 +182,30 @@ opacity:1;
 transform:translateY(0);
 }
 
-.card i{
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+background:#263449;
+box-shadow:
+0 0 25px rgba(250,204,21,0.25),
+0 10px 35px rgba(0,0,0,0.5);
+}
+
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+card i{
 font-size:32px;
 margin-bottom:15px;
 color:#facc15;
-transition:0.3s;
+transition:0.35s;
+}
+
+.card i{
+transform(1.25);
+filter(0 0 8px rgba(250,204,21,0.7));
 }
 
 .card:hover{
