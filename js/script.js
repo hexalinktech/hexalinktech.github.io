@@ -13,9 +13,7 @@ entry.target.classList.add("show");
 });
 });
 
-const elements=document.querySelectorAll(".card");
-
-elements.forEach(el=>{
+document.querySelectorAll(".card").forEach(el=>{
 observer.observe(el);
 });
 
