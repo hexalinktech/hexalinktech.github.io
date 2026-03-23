@@ -1,35 +1,320 @@
-.hero-list{
-margin:20px 0;
-list-style:none;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#0f172a;
+color:white;
+}
+
+.container{
+max-width:1280px;
+margin:auto;
+padding:0 20px;
+}
+
+/* NAVBAR */
+
+.header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+color:#facc15;
+}
+
+.logo-img{
+height:38px;
+}
+
+.nav{
+display:flex;
+gap:25px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav a:hover
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+background:url('../images/hero-bg.jpg') center/cover no-repeat;
+position:relative;
+}
+
+@media(min-width:900px){
+.hero{
+background-attachment:fixed;
+}
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+position:relative;
+}
+
+.hero-content{
+max-width:520px;
+z-index:2;
+}
+
+.hero h1{
+font-size:54px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#facc15;
+}
+
+.hero p{
+margin-bottom:30px;
 color:#cbd5e1;
 }
 
-.hero-list li{
-margin:6px 0;
-}
+/* BOTON */
 
-.hero-contact{
-margin-top:15px;
-color:#facc15;
+.btn{
+background:#facc15;
+color:black;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
 font-weight:600;
+transition:0.3s;
 }
 
-/* PROCESO */
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(250,204,21,0.6);
+}
 
-.process{
+/* SERVICIOS */
+
+.services{
 padding:120px 0;
-background:#0b1220;
 }
 
-.process-grid{
+.why{
+padding:120px 0;
+background:#111827;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+font-size:38px;
+}
+
+.services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.step{
+/* CARDS */
+
+.card{
 background:#1e293b;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
+transition:.35s;
+opacity:0;
+transform:translateY(30px);
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card i{
+font-size:34px;
+margin-bottom:15px;
+color:#facc15;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+background:#263449;
+box-shadow:0 0 25px rgba(250,204,21,0.25);
+}
+
+.card:hover i{
+transform:scale(1.2);
+text-shadow:
+0 0 6px rgba(250,204,21,0.8),
+0 0 14px rgba(250,204,21,0.5);
+}
+
+/* CONTACTO */
+
+.contact{
+padding:120px 0;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 0;
+text-align:center;
+background:#020617;
+}
+
+/* WHATSAPP */
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index:999;
+}
+
+/* PARTICLES */
+
+#particles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+padding-top:120px;
+min-height:80vh;
+}
+
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+gap:22px;
+}
+
+.nav{
+position:absolute;
+top:70px;
+right:0;
+background:#020617;
+flex-direction:column;
+width:220px;
+padding:20px;
+display:none;
+}
+
+.nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:28px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.logo span{
+font-size:14px;
+}
+
 }
